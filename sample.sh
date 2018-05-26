@@ -7,13 +7,11 @@
 # grow = 1 # if you want the subgraphs to double in size at each level, set this equal to 0
 
 # Replace MUTAG with the dataset name of your choice(PTC/PROTEINS/NCI1/NCI109).
-BASE=`pwd`
-dset=MUTAG
-data=$BASE/data/$dset.txt
-feats=$BASE/data/$dset\_nodelabels.txt
-save=$BASE/data/results/output.txt
-mkdir -p $BASE/data/results/
+dset=$DSET
+data=$DATA
+save=$OUTPUT/$DSET\_output.txt
+mkdir -p $OUTPUT
 
 cd MLGkernel
-./runMLG -d $data -f $feats -s $save -r 1 -l 2 -e 0.1 -g 0.01 -t 32 -m 1
+./runMLG -d $data -s $save -r 1 -l 2 -e 0.1 -g 0.01 -t 32 -m 1
 cd ../
