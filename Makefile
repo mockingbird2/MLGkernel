@@ -3,7 +3,7 @@ include $(ROOTDIR)/Makefile.base
 
 
 
-SUBDIRS = utility matrices MLGkernel MLGkernel/swig # tests
+SUBDIRS = utility matrices MLGkernel 
 
 .PHONY: all objects tests clean $(SUBDIRS)
 
