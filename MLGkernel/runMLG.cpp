@@ -95,6 +95,7 @@ void runMLG(Params& p) {
 
 int main(int argc, char * argv[]){
 
+  randomNumberGenerator.seed(std::chrono::high_resolution_clock::now().time_since_epoch().count());
   //threadManager.maxthreads=1;
   // Setup for parsing command line options
   const struct option longopts[] =

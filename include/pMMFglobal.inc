@@ -20,6 +20,7 @@
 #include "Vectorl.hpp"
 #include "Vectorh.hpp"
 #include "ThreadManager.hpp"
+#include <chrono>
 
 bool multithreading=true;
 ThreadManager threadManager(4);
@@ -35,4 +36,3 @@ FIELD Vectorh::dummyZero=0;
 char strbuffer[255];
 
 Log mlog;
-
